@@ -1,0 +1,141 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}
+
+
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card ">
+    <div class="card-body">
+     <div class="container  ">
+    <div class="row text-center">
+     <div class="col-7 mt-10">
+     
+        <a class="btn btn-info" href="loginpage" role="button">Login</a>
+
+
+
+     </div>
+
+
+     <div class="col-1">
+     
+        <a class="btn btn-info" href="signuppage" role="button">Signup</a>
+
+
+
+     </div>
+
+
+
+    </div><!---row close-->
+
+
+
+
+
+     </div><!--container  close-->
+    </div><!--card body  close-->
+  </div><!--card close-->
+
+
+    <div class="container">
+    <div class="row">
+    <div class="col-6 mt-5">
+      
+   
+      <img src="{% static "images/hospital.png" %}" width="250" height="300" /> 
+
+    </div><!--col close-->
+
+    <div class="col-6 mt-5">
+ 
+          
+ <div class="col-8 text-bg-success mt-1 ">
+
+  <h5 class="text-center"> SignUP </h5>
+
+  <div class="card" style="width: 23rem;">
+
+    <div class="card-body">
+
+  <form action="{% url 'signuppage' %}" method="POST">
+    {% csrf_token %}
+    <div class="col-12 text-left">
+      <label for="fname">Username</label>
+      <input type="text" class="form-control " name="username"><br>
+  </div>
+  
+  <div class="col-12 text-left">
+    <label for="email">Emaid ID</label>
+    <input type="text" class="form-control " name="emailid"><br>
+</div>
+
+<div class="col-12 text-left">
+  <label for="email">Phoneno</label>
+  <input type="text" class="form-control " name="phoneno"><br>
+</div>
+
+<div class="col-12 text-left">
+    <label for="email">Password</label>
+    <input type="text" class="form-control " name="password"><br>
+  </div>
+    <div class="col-12 text-center mt-2">
+      <button type="button " class="btn btn-info text-center">SignUp </button>
+  </div>
+   
+  </form> 
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div><!---- row end-->
+</div>
+
+</div>
+
+        
+      
+        </div>
+
+
+
+   </div><!--col close-->
+
+
+
+
+
+
+
+
+
+    </div><!--- row close-->
+
+
+
+
+
+    </div><!--container close-->
+  
+
+
+
+
+
+
+
+
+
+{% endblock content %}
