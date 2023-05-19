@@ -1,0 +1,134 @@
+
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}
+
+
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card ">
+    <div class="card-body">
+     <div class="container  ">
+    <div class="row text-center">
+     <div class="col-7 mt-10">
+     
+        <a class="btn btn-info" href="doctorlogin" role="button">Login</a>
+
+
+
+     </div>
+
+
+     <div class="col-1">
+     
+        <a class="btn btn-info" href="doctorsignup" role="button">Signup</a>
+
+
+
+     </div>
+
+
+
+    </div><!---row close-->
+
+
+
+
+
+     </div><!--container  close-->
+    </div><!--card body  close-->
+  </div><!--card close-->
+
+
+    <div class="container">
+    <div class="row">
+    <div class="col-6">
+      
+   
+      <img src="{% static "images/hospital.png" %}" width="400" height="500" /> 
+
+    </div><!--col close-->
+
+    <div class="col-6 mt-5">
+ 
+          
+ <div class="col-8 text-bg-success mt-1 ">
+
+    <div class="card">
+        <div class="card-body text-center">
+         Login
+        </div>
+      </div>
+  <div class="card mt-2" style="width: 23rem;">
+    <div class="card-body">
+  <form action="{% url 'doctorlogin' %}" method="POST">
+    {% csrf_token %}
+    <div class="col-12 text-left">
+      <label for="fname">USERNAME</label>
+      <input type="text" class="form-control " name="username"><br>
+  </div>
+  
+  <div class="col-12 text-left">
+    <label for="email">Emaid ID</label>
+    <input type="text" class="form-control " name="emailid"><br>
+</div>
+
+<div class="col-12 text-left">
+  <label for="email">Password</label>
+  <input type="text" class="form-control " name="password"><br>
+</div>
+
+  
+    <div class="col-12 text-center mt-3">
+      <button type="button " class="btn btn-info text-center">Login </button>
+  </div>
+   
+  </form> 
+
+</div>
+</div>
+</div>
+
+</div><!---- row end-->
+</div>
+
+</div>
+
+        
+      
+        </div>
+
+
+
+   </div><!--col close-->
+
+
+
+
+
+
+
+
+
+    </div><!--- row close-->
+
+
+
+
+
+    </div><!--container close-->
+  
+
+
+
+
+
+
+
+
+
+{% endblock content %}

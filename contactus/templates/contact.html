@@ -1,0 +1,80 @@
+
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}
+
+
+{% endblock title %}
+
+
+{% block content %}
+
+
+
+<div class="col-9 text-bg-success mt-5 mx-auto  ">
+
+    <h5 class="text-center mt-5"> Contact US </h5>
+
+
+    <div class="card" style="width: 40rem;">
+
+      <div class="card-body">
+    <form action="{% url 'contactus' %}" method="POST">
+      {% csrf_token %}
+      <div class="col-12 text-left">
+        <label for="fname">Name</label>
+        <input type="text" class="form-control " name="name"><br>
+    </div>
+    <div class="col-12 text-left">
+      <label for="lname">Phone No</label>
+      <input type="text" class="form-control" name="number" requred> <br>
+  </div>
+
+  <div class="col-12 text-left">
+    <label for="lname">Email ID</label><br>
+    <input type="text" class="form-control" name="email" requred><br>
+</div>
+
+<div class="col-12 text-left">
+    <label for="browser">Select An Option</label>
+    <input list="browsers" class="form-control" name="options" id="browser">
+    <datalist id="browsers">
+      <option value="doctorappointment">
+      <option value="labtest">
+    </datalist>
+</div>
+
+<br>
+<div class="col-12 text-left">
+  <label for="lname"> Message </label><br>
+  <textarea rows="4" cols="50" name="message" class="form-control" >
+    Message</textarea>
+</div>
+<br>
+<div class="col-12 text-left">
+    <label for="lname">File Upload </label><br>
+    <input type="file" class="form-control" name="upload" required><br>
+  </div>
+
+
+
+      <div class="col-12 text-center mt-3">
+        <button type="button " class="btn btn-primary text-center">Submit </button>
+    </div>
+     
+    </form> 
+
+
+
+ </div>
+
+</div>
+
+</div>
+
+
+
+
+
+{% endblock content %}
